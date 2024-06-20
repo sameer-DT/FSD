@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accordian</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</head>
+<body>
+    <div class="container mt-5">
+        <div class="accordion" id="ExcelRAccordian">
+            <!-- Child one -->
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                   <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#div1">
+                    Content-I
+                   </button>
+                </h2>
+                <div id="div1" class="accordion-collapse collapse show" data-bs-parent="#ExcelRAccordian">
+                    <div class="accordion-body">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem enim eos quibusdam, ab quos cum exercitationem. Explicabo sequi totam fugit saepe. Quas sit consequatur velit fugiat? Incidunt asperiores reiciendis sapiente.</div>
+                </div>
+            </div>
+
+             <!-- Child two -->
+             <div class="accordion-item">
+                <h2 class="accordion-header">
+                   <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#div2">
+                    Content-II
+                   </button>
+                </h2>
+                <div id="div2" class="accordion-collapse collapse" data-bs-parent="#ExcelRAccordian">
+                    <div class="accordion-body">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem enim eos quibusdam, ab quos cum exercitationem. Explicabo sequi totam fugit saepe. Quas sit consequatur velit fugiat? Incidunt asperiores reiciendis sapiente.</div>
+                </div>
+            </div>
+
+
+             <!-- Child three -->
+             <div class="accordion-item">
+                <h2 class="accordion-header">
+                   <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#div3">
+                    Content-III
+                   </button>
+                </h2>
+                <div id="div3" class="accordion-collapse collapse " data-bs-parent="#ExcelRAccordian">
+                    <div class="accordion-body">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem enim eos quibusdam, ab quos cum exercitationem. Explicabo sequi totam fugit saepe. Quas sit consequatur velit fugiat? Incidunt asperiores reiciendis sapiente.</div>
+                </div>
+            </div>
+
+
+
+             <!-- Child Four -->
+             <div class="accordion-item">
+                <h2 class="accordion-header">
+                   <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#div4">
+                    Content-IV
+                   </button>
+                </h2>
+                <div id="div4" class="accordion-collapse collapse" data-bs-parent="#ExcelRAccordian">
+                    <div class="accordion-body">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem enim eos quibusdam, ab quos cum exercitationem. Explicabo sequi totam fugit saepe. Quas sit consequatur velit fugiat? Incidunt asperiores reiciendis sapiente.</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

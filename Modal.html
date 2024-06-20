@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modal in BootStrap</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+    <!-- 
+        1) modal
+        2) modal-dialog
+        3) modal-content
+        4) modal-header
+        5) modal-title
+        6) modal-body
+        7) modal-footer
+
+        event:
+        *****
+            data-bs-dismiss="modal"
+
+            data-bs-toggle="modal"
+
+            data-bs-targe"#exampleModal"
+     -->
+     <div class="container mt-5">
+     <button class="btn btn-success btn-sm" data-bs-toggle="modal" data-bs-target="#excelrmodal">
+        Launch
+     </button>
+     <div id="excelrmodal" class="modal fade" data-bs-backdrop="static">
+        <div class="modal-dialog modal-dialog-centered modal-sm">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title">Products</h1>
+                    <button class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <h2>Do you want to insert new record ?</h2>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-danger btn-sm" data-bs-dismiss="modal">
+                        Cancel
+                    </button>
+                    <button class="btn btn-success btn-sm">Ok</button>
+                </div>
+            </div>
+        </div>
+     </div>
+    </div>
+</body>
+</html>
