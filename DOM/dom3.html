@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DoM-3</title>
+</head>
+<body>
+    <!-- <div>
+        <p>Iam a paragraph</p>
+    </div> -->
+    <script>
+        // let div=document.querySelector("div");
+        // let p=document.querySelector("p");
+        // let h1=document.createElement("h1")
+        // h1.textContent="Text Before the specified element"
+        // div.insertBefore(h1,p);
+        // let div=document.querySelector("div")
+        // let h1=document.createElement("h1")
+        // h1.textContent="Iam added"
+        // div.appendChild(h1)
+    </script>
+    <!-- <button onclick="func_one()">Click Here</button>
+    <script>
+        let func_one=()=>{
+            let div=document.querySelector("div");
+            div.textContent="Button Clicked";
+        }
+    </script> -->
+    <!-- <button>Add Event Listener</button>
+    <script>
+        let b=document.querySelector("button");
+        b.addEventListener("click",()=>{
+            let div=document.querySelector("div");
+            div.textContent="addEventListener added successfully";
+        })
+    </script> -->
+    <!-- <p>Welcome to ExcelR</p>
+    <p>Welcome to ExcelR</p>
+    <p>Welcome to ExcelR</p>
+    <p>Welcome to ExcelR</p>
+    <p>Welcome to ExcelR</p>
+    <p>Welcome to ExcelR</p>
+    <script>
+        let all_p=document.querySelectorAll("p");
+        for(let p of all_p){
+            p.style.color="blue";
+        }
+    </script> -->
+    <!-- <div>Hello Welcome to DOM Manipulations</div>
+    <div>Hello Welcome to DOM Manipulations</div>
+    <div>Hello Welcome to DOM Manipulations</div>
+    <div>Hello Welcome to DOM Manipulations</div>
+    <div>Hello Welcome to DOM Manipulations</div>
+    <div>Hello Welcome to DOM Manipulations</div>
+    <script>
+        let div1=document.querySelector("div");
+        div1.style.color="green";
+        let all_div=document.querySelectorAll("div");
+        all_div[1].style.color="red"
+        all_div[2].style.color="blue"
+        all_div[3].style.color="yellow"
+        all_div[4].style.color="orange"
+        all_div[5].style.color="purple"
+    </script>
+    <input type="text" id="uname" placeholder="Please enter your Name">
+    <button>Submit</button> -->
+    <script>
+        // let button=document.querySelector("button");
+        // let input=document.getElementById("uname");
+        // button.addEventListener("click",()=>{
+        //     console.log(input.value);
+        // })
+    </script>
+    <!-- <h2>Class Work</h2>
+    <input type="text" id="name" placeholder="Enter some Text.....">
+    <button>Submit</button>
+    <h1 id="msg"></h1> -->
+    <script>
+        // let inp=document.getElementById("name");
+        // inp.style.color="red"
+        // let button=document.querySelector("button");
+        // button.addEventListener("click",()=>{
+        //     document.getElementById("msg").textContent=`Hello ${inp.value} Welcome to Excelr`
+        // })
+    </script>
+    <!-- <h2>Class Work-II</h2>
+    <input type="number" id="num1" placeholder="Enter Some number">
+    <input type="number" id="num2" placeholder="Square">
+    <input type="number" id="num3" placeholder="cube">
+    <br><br>
+    <button>Calculate Square and Cube</button>
+    <script>
+        let inp1=document.getElementById("num1");
+        let inp2=document.getElementById("num2");
+        let inp3=document.getElementById("num3");
+        let button=document.querySelector("button");
+        button.addEventListener("click",()=>{
+            inp2.value=parseInt(inp1.value) *  parseInt(inp1.value);
+            inp3.value=parseInt(inp1.value) ** 3;
+        })
+    </script> -->
+    <h1>Simple Calculator</h1>
+    <input type="number" id="n1" placeholder="Enter first Number">
+    <br><br><br>
+    <input type="number" id="n2" placeholder="Enter Second Number">
+    <br><br><br>
+    <button>Perform the Calculation</button>
+    <br><br><br><br>
+    <input type="number" id="n3" placeholder="Addition">
+    <br><br><br>
+    <input type="number" id="n4" placeholder="Subtraction">
+    <br><br><br>
+    <input type="number" id="n5" placeholder="Multiplication">
+    <br><br><br>
+    <input type="number" id="n6" placeholder="Division">
+    
+    
+    <script>
+        let n1=document.getElementById("n1");
+        let n2=document.getElementById("n2");
+        let n3=document.getElementById("n3");
+        let n4=document.getElementById("n4");
+        let n5=document.getElementById("n5");
+        let n6=document.getElementById("n6");
+        let button=document.querySelector("button");
+        button.addEventListener("click",()=>{
+            n3.value=parseInt(n1.value) + parseInt(n2.value);
+            n4.value=parseInt(n1.value) - parseInt(n2.value);
+            n5.value=parseInt(n1.value) * parseInt(n2.value);
+            n6.value=parseInt(n1.value) / Math.floor(parseInt(n2.value));
+        })
+
+
+
+    </script>
+
+
+</body>
+</html>

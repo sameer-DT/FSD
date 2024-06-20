@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Queries</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        body{
+            margin:0 ;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .parent{
+            height: 100vh;
+        }
+        .header{
+            height: 10%;
+            display: flex;
+            background-color: aqua;
+            justify-content: space-between;
+        }
+        .header_logo{
+            font-size: 3vw;
+        }
+        .header_menu{
+            display: flex;
+            font-size: 1vw;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            margin:40px;
+        }
+        .header_menu > a{
+            text-decoration: none;
+            background-color: black;
+            border: 1px solid white;
+            padding: 5px;
+            color: white;
+        }
+        .main{
+            display: flex;
+            height: 80%;
+            background-color: black;
+        }
+        .main_logo{
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .main_logo >img{
+          width: 500px;
+          height:500px;
+          border-radius: 50%;
+        }
+        .description{
+            color: white;
+            flex:1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+        .desc1{
+            font-size: 1.5vw;
+        }
+        .desc2,.desc3,.desc4{
+            font-size: 1vw;
+        }
+        .footer{
+            height: 10%;
+            background-color: purple;
+            color: white;
+            display: flex;
+            gap: 40px;
+            justify-content: flex-end;
+            font-size: 30px;
+        }
+        i{
+            margin: 10px;
+        }
+        @media (max-width:992px) {
+              .header_menu{
+                display: none;
+              }
+              
+              .header{
+                justify-content: center;
+                align-items: center;
+              }
+              .main{
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+              }
+              .main_logo > img{
+                width: 250px;
+                height:250px;
+                border-radius: 50%;
+              }
+              .desc1{
+                font-size: 5vw;
+              }
+              .desc2,.desc3,.desc4{
+                display: none;
+              }
+              .footer{
+                justify-content: center;
+              }
+        }
+
+        @media (max-width:768px) {
+              .header_menu{
+                display: none;
+              }
+              .header_logo{
+                font-size: 50px;
+              }
+              .header{
+                justify-content: center;
+                align-items: center;
+              }
+              .main{
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+              }
+              .main_logo > img{
+                width: 250px;
+                height:250px;
+                border-radius: 50%;
+              }
+              .desc1{
+                font-size: 6vw;
+              }
+              .desc2,.desc3,.desc4{
+                visibility: visible;
+              }
+              .footer{
+                justify-content: center;
+              }
+              .i1,.i3{
+                display: none;
+              }
+        }
+    </style>
+</head>
+<body>
+    <div class="parent">
+
+
+        <div class="header">
+            <div class="header_logo">ExcelR</div>
+            <div class="header_menu">
+                <a href="#">Home</a>
+                <a href="#">About Us</a>
+                <a href="#">Contact Us</a>
+                <a href="#">Sign In/Sign Up</a>
+            </div>
+        </div>
+
+
+        <div class="main">
+            <div class="main_logo">
+                <img src="excelr.jpeg" alt="logo">
+            </div>
+            <div class="description">
+                <p class="desc1">Hello I am a Full stack Web developer</p>
+                <p class="desc2">I love coding and designing websites.</p>
+                <p class="desc3">ExcelR Solutions,2nd Quadrant,Cyber Towers</p>
+                <p class="desc4">Hyderabad,Telangana</p>
+            </div>
+        </div>
+
+
+        <div class="footer">
+            <i class="fa fa-whatsapp i1"></i>
+            <i class="fa fa-facebook i2"></i>
+            <i class="fa fa-instagram i3"></i>
+            <i class="fa fa-twitter i4"></i>
+        </div>
+    </div>
+</body>
+</html>

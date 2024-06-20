@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Tables2</title>
+</head>
+<style>
+    table{
+        border-collapse: collapse ;
+        width: 100%;
+        text-align: center;
+    }
+    th{
+        height: 50px;
+    }
+    td{
+        height: 30px;
+    }
+    tr:nth-child(odd){
+        background-color:pink;
+    }
+    tr:nth-child(even){
+        background-color: bisque;
+    }
+    tr:hover{
+        color:white;
+        background-color: black;
+    }
+    
+</style>
+<body>
+    <table border="1">
+        <tr>
+            <th>PID</th>
+            <th>PNAME</th>
+            <th>PCOST</th>
+            <th>UPDATE</th>
+            <th>DELETE</th>
+        </tr>
+        <tr>
+            <td>P002</td>
+            <td>PTWO</td>
+            <td><i class="fa fa-inr"></i>20000</td>
+            <td><i class="fa fa-edit"></i></td>
+            <td><i class="fa fa-trash"></i></td>
+        </tr>
+        <tr>
+            <td>P003</td>
+            <td>Pthree</td>
+            <td><i class="fa fa-inr"></i>30000</td>
+            <td><i class="fa fa-edit"></i></td>
+            <td><i class="fa fa-trash"></i></td>
+        </tr>
+        <tr>
+            <td>P004</td>
+            <td>Pfour</td>
+            <td><i class="fa fa-inr"></i>40000</td>
+            <td><i class="fa fa-edit"></i></td>
+            <td><i class="fa fa-trash"></i></td>
+        </tr>
+        <tr>
+            <td>P005</td>
+            <td>Pfive</td>
+            <td><i class="fa fa-inr"></i>50000</td>
+            <td><i class="fa fa-edit"></i></td>
+            <td><i class="fa fa-trash"></i></td>
+        </tr>
+        <tr>
+            <td>P006</td>
+            <td>PSix</td>
+            <td><i class="fa fa-inr"></i>60000</td>
+            <td><i class="fa fa-edit"></i></td>
+            <td><i class="fa fa-trash"></i></td>
+        </tr>
+    </table>
+</body>
+</html>

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <link rel="stylesheet" href="forms.css">
+</head>
+<body>
+    <form>
+        <table>
+            <tr>
+                <td>Enter Your First Name : </td>
+                <td>
+                    <input type="text" name="fname" placeholder="Enter your first name">
+                </td>
+                <td>
+                    <span>Please Enter valid first name</span>
+                </td>
+            </tr>
+
+            <tr>
+                <td>Enter Your Last Name : </td>
+                <td>
+                    <input type="text" name="lname" placeholder="Enter your Last name">
+                </td>
+                <td>
+                    <span>Please Enter valid Last name</span>
+                </td>
+            </tr>
+
+            <tr>
+                <td>Enter Password : </td>
+                <td>
+                    <input type="password" name="psswd" placeholder="Enter Password">
+                </td>
+                <td>
+                    <span>Please Enter valid Password</span>
+                </td>
+            </tr>
+
+            <tr>
+                <td>Re-Enter the password : </td>
+                <td>
+                    <input type="password" name="psswd" placeholder="Re-Enter the password">
+                </td>
+                <td>
+                    <span>Password and re-enter password should be same</span>
+                </td>
+            </tr>
+
+            <tr>
+                <td>Gender : </td>
+                <td>
+                    <input type="radio" name="gender" value="male">Male
+                    <input type="radio" name="gender" value="female">Female
+                </td>
+                <td>
+                    <span>Select your gender</span>
+                </td>
+            </tr>
+
+            <tr>
+                <td>Languages : </td>
+                <td>
+                    <input type="checkbox" name="lang" value="c">C
+                    <input type="checkbox" name="lang" value="cpp">C++
+                </td>
+                <td>
+                    <span>Select Languages you know</span>
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+                <input type="checkbox" name="lang" value="python">Python
+                <input type="checkbox" name="lang" value="java">Java
+                </td>
+                
+            </tr>
+
+            <tr>
+                <td>Select your Country</td>
+                <td>
+                    <select name="country">
+                        <option value="ind">India</option>
+                        <option value="pak">Pakistan</option>
+                        <option value="usa">America</option>
+                        <option value="ch">China</option>
+                    </select>
+                </td>
+                <td>
+                    <span>select one country</span>
+                </td>
+            </tr>
+
+            <tr>
+                <td>Mobile Number : </td>
+                <td>
+                    <input type="tel" name="mobile">
+                </td>
+                <td>Please enter valid mobile number</td>
+            </tr>
+
+            <tr>
+                <td>Mail ID : </td>
+                <td>
+                    <input type="email" name="mailid">
+                </td>
+                <td>Please enter valid Email ID</td>
+            </tr>
+
+            <tr>
+                <td>Choose Date : </td>
+                <td>
+                    <input type="date" name="date">
+                </td>
+                <td>Select date</td>
+            </tr>
+
+            <tr>
+                <td>Choose Time : </td>
+                <td>
+                    <input type="time" name="time">
+                </td>
+                <td>Select time</td>
+            </tr>
+
+            <tr>
+                <td>Address : </td>
+                <td>
+                    <textarea name="address"></textarea>
+                </td>
+                <td>Please enter valid Address</td>
+            </tr>
+
+            <tr>
+                <td>
+                    <input type="submit" value="Register">
+                </td>
+                <td>
+                    <input type="reset" value="Clear">
+                </td>
+                <td></td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>

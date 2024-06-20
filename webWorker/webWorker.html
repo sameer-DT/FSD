@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebWorker API</title>
+</head>
+<body>
+    <script>
+        let addition=new Worker("addition.js");
+        addition.postMessage({"num1":50,"num2":20});
+        addition.onmessage=function(event){
+            let addRes=event.data;
+            document.write("Addition:",addRes,"<br>");
+        }
+        let subtraction=new Worker("subtraction.js");
+            subtraction.postMessage({"a":50,"b":30});
+            subtraction.onmessage=function(e){
+                let subRes=e.data;
+                document.write("Subtraction:",subRes,"<br>");
+            }
+        let multiplication=new Worker("multiply.js");
+        multiplication.postMessage({"x":4,"y":7});
+        multiplication.onmessage=function(e){
+            let mulRes=e.data;
+            document.write("Multiplication :",mulRes,"<br>")
+        }
+        let division=new Worker("division.js");
+        division.postMessage({"p":20,"q":4});
+        division.onmessage=function(e){
+            let divRes=e.data;
+            document.write("Division:",divRes,"<br>")
+        }
+    </script>
+</body>
+</html>

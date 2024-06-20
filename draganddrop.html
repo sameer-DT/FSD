@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drag and drop API</title>
+</head>
+<body>
+    <!-- <script>
+        function allowDrop(event){
+            event.preventDefault();
+        }
+        function start(event){
+            event.dataTransfer.setData("excelr",event.target.id);
+        }
+        function drop(event){
+            event.preventDefault();
+            event.target.appendChild(document.getElementById(event.dataTransfer.getData("excelr")));
+        }
+    </script>
+    <div id="div1" style="width: 500px; height: 500px;border: 1px solid red;" ondrop="drop(event)" ondragover="allowDrop(event)"></div> 
+    <img id="my_img" draggable="true" ondragstart="start(event)" src="div7img.jpeg" width="500px" height="500px"> -->
+
+    <img id="my_img" draggable="true" ondragstart="start(event)" src="div7img.jpeg" width="400px" height="400px">
+    <div id="div1" style="width: 400px; height: 400px; border: 3px solid blue;" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+    
+    <script>
+        function start(event){
+            event.preventDefault();
+        }
+    
+        function drop(event){
+            event.preventDefault();
+            var image = document.getElementById(event.dataTransfer.getData("excelr"));
+            // Append the image to the parent of the target division
+            event.currentTarget.parentNode.appendChild(image);
+        }
+    
+        function allowDrop(event){
+            event.dataTransfer.setData("excelr",event.target.id);
+            event.preventDefault();
+        }
+    </script>
+    
+</body>
+</html>

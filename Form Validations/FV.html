@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validations</title>
+    <link rel="stylesheet" href="FV.css">
+    <script src="FV.js"></script>
+</head>
+<body>
+    <form name="ExcelRForm" onsubmit="return register()">
+        <table>
+            <tr>
+                <td>
+                    First Name :
+                </td>
+                <td>
+                    <input type="text" name="fname" placeholder="Enter First Name">
+                </td>
+                <td>
+                    <span id="fname_err"></span>
+                </td>
+            </tr>
+            <!-- Last Name -->
+            <tr>
+                <td>
+                    Last Name :
+                </td>
+                <td>
+                    <input type="text" name="lname" placeholder="Enter Last Name">
+                </td>
+                <td>
+                    <span id="lname_err"></span>
+                </td>
+            </tr>
+
+            <!-- Password -->
+            <tr>
+                <td>
+                    Password :
+                </td>
+                <td>
+                    <input type="password" name="pwd" placeholder="Enter Password">
+                </td>
+                <td>
+                    <span id="pwd_err"></span>
+                </td>
+            </tr>
+
+             <!-- Confirm Password -->
+             <tr>
+                <td>
+                    Confirm Password :
+                </td>
+                <td>
+                    <input type="password" name="cpwd" placeholder="Enter Confirm Password">
+                </td>
+                <td>
+                    <span id="cpwd_err"></span>
+                </td>
+            </tr>
+
+
+            <!-- Email -->
+            <tr>
+                <td>
+                    Email :
+                </td>
+                <td>
+                    <input type="email" name="email" placeholder="Enter Email Id">
+                </td>
+                <td>
+                    <span id="email_err"></span>
+                </td>
+            </tr>
+
+
+            <!-- Phone Number -->
+            <tr>
+                <td>
+                    Mobile Number :
+                </td>
+                <td>
+                    <input type="tel" name="mobile" placeholder="Enter Mobile Number">
+                </td>
+                <td>
+                    <span id="mobile_err"></span>
+                </td>
+            </tr>
+
+
+            
+            <!-- Gender -->
+            <tr>
+                <td>
+                    Gender :
+                </td>
+                <td>
+                    <input type="radio" name="gender" >Male
+                    <input type="radio" name="gender" >Female
+                </td>
+                <td>
+                    <span id="gender_err"></span>
+                </td>
+            </tr>
+
+
+            <!-- Check Box -->
+            <tr>
+                <td>
+                    Interests :
+                </td>
+                <td>
+                    <input type="checkbox" name="interest">Playing
+                    <input type="checkbox" name="interest">Cooking
+                    <input type="checkbox" name="interest">Dancing
+                    <input type="checkbox" name="interest">Singing
+                </td>
+                <td>
+                    <span id="interest_err"></span>
+                </td>
+            </tr>
+
+
+            
+
+
+            <!-- submit and reset buttons -->
+            <tr>
+                <td>
+                    <input type="submit" value="Submit">
+                </td>
+                <td>
+                    <input type="reset" value="Clear">
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>

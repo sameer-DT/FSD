@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Manipulations</title>
+</head>
+<body>
+    <p id="my_paragraph"></p>
+    <script>
+        let p=document.getElementById("my_paragraph");
+        console.log(p)
+    </script>
+    <!-- <p id="my_h1"></p>
+    <script>
+        let h1=document.getElementById("my_h1");
+        console.log(h1);
+    </script> -->
+    <p id="my_h1"></p>
+    <script>
+        let h1=document.getElementById("my_h1");
+        h1.innerHTML="Welcome to ExcelR Hyderabad";
+    </script>
+    <h4>How would you rate the biryani at Mehfil.?</h4>
+    <br>
+    <input type="radio" name="biryani" value="5">5 stars
+    <input type="radio" name="biryani" value="4">4 stars
+    <input type="radio" name="biryani" value="3">3 stars
+    <input type="radio" name="biryani" value="2">2 stars
+    <input type="radio" name="biryani" value="1">1 star
+    <br>
+    <button onclick="func_one()">Rate</button>
+    <br><br><br>
+    <div id="rating_result"></div>
+    <script>
+        const func_one=()=>{
+            let rating=document.getElementsByName("biryani");
+            rating.forEach((element,index)=>{
+                if(element.checked){
+                    document.getElementById("rating_result").innerHTML=element.value;
+                }
+            })
+        }
+    </script>
+    <hr>
+    <p></p>
+    <p></p>
+    <p></p>
+    <h1></h1>
+    <h1></h1>
+    <div></div>
+    <script>
+        let all_p=document.getElementsByTagName("p");
+        document.write(`Total paragraphs : ${all_p.length}`)
+        let all_h1=document.getElementsByTagName("h1");
+        document.write(`Total h1 tags : ${all_h1.length}`)
+        let all_div=document.getElementsByTagName("div")
+        document.write(`Total div tags : ${all_div.length}`)
+    </script>
+    <ul id="menu">
+        <li class="list">HTML</li>
+        <li class="list">CSS</li>
+        <li class="list">JavaScript</li>
+        <li class="list">React</li>
+    </ul>
+    <div id="res"></div>
+    <script>
+        let all_li=document.getElementsByClassName("list");
+        for(let i=0;i<=all_li.length;i++){
+            console.log(all_li[i].textContent);
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Capturing</title>
+    <style>
+        #parent{
+            width: 300px;
+            height: 300px;
+            border: 3px solid blue;
+        }
+        #child{
+            width: 200px;
+            height: 200px;
+            border: 3px solid red;
+            position: relative;
+            left: 20px;
+            top: 40px;
+        }
+        #subchild{
+            width: 160px;
+            height: 160px;
+            border: 3px solid purple;
+            position: relative;
+            left: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Event Capturing</h1>
+    <div id="parent">
+        Parent
+        <div id="child">
+            child
+            <div id="subchild">
+                SubChild
+            </div>
+        </div>
+    </div>
+    <script>
+        let parent=document.querySelector("#parent");
+        let child=document.querySelector("#child");
+        let subchild=document.querySelector("#subchild");
+        
+        parent.addEventListener("click",()=>{
+            console.log("Parent clicked!");
+        },true)
+        child.addEventListener("click",(e)=>{
+            console.log("Child clicked!");
+        },true)
+        subchild.addEventListener("click",(e)=>{
+            console.log("SubChild Clicked!")
+        },true);
+    </script>
+</body>
+</html>

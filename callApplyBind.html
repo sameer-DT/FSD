@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CALL APPLY AND BIND</title>
+</head>
+<body>
+    <script>
+        let obj={
+            "num1":100
+        };
+        function func_one(a1,a2){
+            console.log(this.num1+a1+a2);
+        }
+        // func_one.call(obj,100,200);
+        arr1=[200,300];
+        func_one.apply(obj,arr1);
+        
+    </script>
+</body>
+</html>

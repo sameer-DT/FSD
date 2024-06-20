@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Storages API</title>
+</head>
+<body>
+    <!-- <script>
+        localStorage.setItem("login_details",JSON.stringify({"uname":"ExcelR","pswd":"ExcelR@123"}));
+        let obj=JSON.parse(localStorage.getItem("login_details"));
+        console.log(obj)
+        setTimeout(()=>{
+            localStorage.removeItem("login_details");
+        },5000)
+    </script>
+     <script>
+        sessionStorage.setItem("login_details",JSON.stringify({"uname":"ExcelR","pswd":"ExcelR@123"}));
+        let ob1=JSON.parse(sessionStorage.getItem("login_details"));
+        console.log(ob1)
+        setTimeout(()=>{
+            sessionStorage.removeItem("login_details");
+        },5000)
+    </script> -->
+    <label for="">Name : </label>
+    <input type="text" id="name" placeholder="please Enter Your Name">
+    <br><br><br>
+    <label for="">Username : </label>
+    <input type="text" id="uname" placeholder="please Enter your User Name">
+    <br><br><br>
+    <label for="">Password : </label>
+    <input type="password" id="pswd" placeholder="Please Enter Your Password"><br><br><br>
+    <h1 id="data"></h1>
+    <br><br><br>
+    <button onclick="store()">store My data to Local storage</button>
+    <br><br><br>
+    <button onclick="display()">Display my data</button>
+    <br><br><br>
+    <button onclick="remove()">Delete My data</button>
+    <script>
+        let name=document.getElementById("name");
+        let uname = document.getElementById("uname");
+        let pwd =document.getElementById("pswd");
+
+        let store=()=>{
+            if(!name.value || !uname.value || !pwd.value){
+                alert( "All fields are required." ) 
+            }else{
+            localStorage.setItem(name.value,JSON.stringify({"uname":uname.value,"pswd":pwd.value}));
+            alert('Your Data is Stored Successfully');
+            }
+        }
+
+        let display=()=>{
+            document.getElementById("data").innerHTML=`Name : ${name.value} <br><br> User name : ${uname.value} <br><br> Pass word : ${pwd.value}`
+        }
+
+        let remove=()=>{
+            localStorage.removeItem(name.value,uname.value,pwd.value);
+            document.getElementById("data").innerHTML=' ';
+            alert('Data has been deleted successfully')
+        }
+        
+    </script>
+</body>
+</html>

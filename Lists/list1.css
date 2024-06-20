@@ -1,0 +1,19 @@
+ul,ol{
+    background-color: powderblue;
+    margin: 50px;
+    width: 15%;
+    display: inline-block;
+    border: 1px solid purple;
+    border-radius: 15px;
+}
+li{
+    padding: 20px;
+    margin:20px;
+    background-color: aqua;
+    border: 1px solid red;
+    border-radius: 20px;
+}
+li:hover{
+    background-color: black;
+    color:white;
+}

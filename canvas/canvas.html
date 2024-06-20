@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canvas</title>
+</head>
+<body>
+    <canvas width="300" height="300" style="border: 1px solid red;" id="excelr">
+    </canvas>
+    <script>
+        var c=document.getElementById("excelr");
+        var c1=c.getContext("2d");
+        c1.fillStyle="red";
+        c1.fillRect(20,20,250,250);
+    </script>
+</body>
+</html>

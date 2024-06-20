@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <h1>Hello</h1>
+    </div>
+    
+    <script>
+        // let div=document.querySelector("div");
+        // div.setAttribute("key1","hello");
+        // console.log(div.getAttribute("key1"));
+        // div.removeAttribute("key1");
+        // let h1=document.querySelector("h1");
+        // h1.setAttribute("key1","value1")
+        // h1.setAttribute("key2","value2");
+        // console.log(h1.getAttribute("key1"));
+        // console.log(h1.getAttribute("key2"));
+    </script>
+    <script>
+        // let div=document.querySelector("div");
+        // let h1=document.createElement("h1");
+        // h1.textContent="ExcelR Solutions"
+        // let h2=document.createElement("h2");
+        // h2.textContent="Full Stack Web development"
+        // let p=document.createElement("p");
+        // p.textContent="Iam a paragraph"
+        // div.appendChild(h1);
+        // div.appendChild(h2);
+        // div.appendChild(p);
+    </script>
+    <script>
+        let div=document.querySelector("div");
+        let h1=document.querySelector("h1");
+        let clone=h1.cloneNode(true);
+        div.appendChild(clone);
+    </script>
+</body>
+</html>
