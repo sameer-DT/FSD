@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FILTER</title>
+</head>
+<body>
+    <script>
+        let arr1=[
+            {"fruit":"Apples",cost:500},
+            {"fruit":"Oranges",cost:200},
+            {"fruit":"Mangoes",cost:1000},
+            {"fruit":"Water Melon",cost:400},
+            {"fruit":"Pineapple",cost:300}
+        ]
+        let new_arr=arr1.filter((element,index)=>{
+            if(element.cost>=500){
+                return element.fruit
+            }
+        })
+        console.table(new_arr)
+    </script>
+</body>
+</html>

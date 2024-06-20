@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Example-21</title>
+</head>
+<body>
+    <h2>Product Name : <input type="text" id="productName"></h2>
+    <h2>Product Cost : <input type="number" id="productCost"></h2>
+    <h2>Quantity : <input type="number" id="quantity"></h2>
+    <button onclick="calculate()">Calculate</button>
+    <h2>Final Cost : <input type="number" id="result"></h2>
+    <script>
+        let calculate=()=>{
+            let prod=document.getElementById("productCost").value;
+            let cost=document.getElementById("quantity").value;
+            document.getElementById("result").value=parseInt(prod) * parseInt(cost);
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Map in JSON</title>
+</head>
+<body>
+    <script>
+        // let obj1={
+        //     "key1":"HTML"
+        // }
+        // let obj2={
+        //     ...obj1,
+        //     "key2":"CSS"
+        // }
+        // let obj3={
+        //     ...obj2,
+        //     "key3":"JavaScript",
+        //     "key4":"REACT"
+        // }
+        // console.log(obj3);
+        console.log("square Calculation from array")
+        let arr=[1,2,3,4,5,6]
+        let squares=arr.map((item,index)=>{
+            return item*item;
+        })
+        console.log(squares);
+        console.log("cubes Calculation from array")
+        let cubes=arr.map((item,index)=>{
+            return item*item*item
+        })
+        console.log(cubes);
+    </script>
+</body>
+</html>

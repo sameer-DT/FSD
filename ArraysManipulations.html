@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrays Manipulations</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.13.6/underscore-min.js"></script>
+</head>
+<style>
+   
+</style>
+<body>
+    <script>
+        let arr1=[10,20,30];
+        let arr2=[40,50];
+        let arr=[...arr1,...arr2];
+        document.write(`<p>${arr}</p>`)
+    </script>
+    <h2>Question-2</h2>
+    <script>
+        let a1=[1,2];
+        let a2=[3,4];
+        let a3=[5,6];
+        let array=[...a1,...a2,...a3];
+        document.write(`
+        <p>${array}</p>
+        `)
+    </script>
+    <h2>Question-3(Destructuring Array)</h2>
+    <script>
+        let Arr=[1,2,3,4,5]
+        let [x,y,...z]=Arr;
+        let [p,...q]=z;
+        let [r,...s]=q;
+        let [l]=s;
+        document.write(`
+        <p>${x,y,p,r,l}</p>
+        `)
+        console.log(x,y,p,r,l);
+    </script>
+    <h2>Destructuring-1</h2>
+    <script>
+        let numbers=[100,200,300,400,500]
+        let [a,b,...c]=numbers;
+        let [d,...e]=c;
+        let [f,...g]=e;
+        let [h]=g;
+        document.write(`${numbers.map((element)=>{
+            return element
+        })}`)
+    </script>
+    <!-- <h2>Immutablitity</h2>
+    <script>
+        let ar1=[1];
+        let ar2=[...ar1,2];
+        let ar3=[...ar2,3];
+        let ar4=[...ar3,4];
+        let ar5=[...ar4,5];
+        console.log(ar5);
+    </script> -->
+    <h2>Immutablitity-2</h2>
+    <script>
+        let ar1=[10,20,30,40,50];
+        let ar2=[...ar1,60,70,80,90,100];
+        let ar3=[...ar2,110,120,130,140,150];
+        document.write(`${ar3.map((item)=>{
+            return item;
+        })}`)
+    </script>
+    <h2>Map()</h2>
+    <script>
+        //map() is used to manipulate each and every element in array
+        //map() function introduced in ES6 version
+        //map() function will return new array
+        // let array1=[1,2,3,4,5];
+        // let new_arr=array1.map((element)=>{
+        //     return element*10;
+        // })
+        // console.log(new_arr);
+        let array1=[1000,2000,3000,4000,5000];
+        let new_arr=array1.map((element,index)=>{
+            return element/10;
+        })
+        document.write(`<p>${new_arr}</p>`)
+
+    </script>
+    <h2>filter()</h2>
+    <script>
+        // let m=[10,20,30,40,50];
+        // let n=m.filter((element,index)=>{
+        //     return element<40;
+        // })
+        // document.write(`<p>${n}</p>`)
+        let m=[1000,2000,3000,4000,5000]
+        let n=m.filter((element,index)=>{
+            return element>3000;
+        })
+        document.write(`<p>${n}</p>`)
+    </script>
+    <h2>filter() and map()</h2>
+    <script>
+        // let i=[1,2,3,4,5];
+        // let new_i=i.map((element,index)=>{
+        //     return element*1000;
+        // }).filter((element,index)=>{
+        //     return element<=2000;
+        // })
+        // document.write(`<p>${new_i}</p>`)
+        let i=[1000,2000,3000,4000,5000]
+        let new_i=i.map((element,index)=>{
+            return element/1000;
+        }).filter((element,index)=>{
+            return element<=2;
+        })
+        document.write(`<p>${new_i}</p>`)
+    </script>
+    <h2>reduce() function</h2>
+    <script>
+        let arr3=[10,20,30,40,50]
+        let sum=arr3.reduce((first,last)=>{
+            return first+last;
+        },50);
+        document.write(`<p>${sum}</p>`)
+    </script>
+    <h2>map() + reduce() + filter()</h2>
+    <script>
+        // let arr4=[1,2,3,4,5];
+        // let res=arr4.map((element,index)=>{
+        //     return element*10;
+        // }).filter((element,index)=>{
+        //     return element<=20;
+        // }).reduce((first,last)=>{
+        //     return first+last;
+        // },70);
+        // document.write(`<p>${res}</p>`)
+        let arr4=[1000,2000,3000,4000,5000];
+        let res=arr4.map((element,index)=>{
+            return element/100;
+        }).filter((element,index)=>{
+            return element<=20;
+        }).reduce((first,last)=>{
+            return last-first;
+        })
+        document.write(`<p>${res}</p>`)
+    </script>
+    <h2>ReduceRight</h2>
+    <script>
+        //ReduceRight is used to concat the elements from right to left
+        let arr5=["ExcelR","to","Welcome"];
+        let res5=arr5.reduceRight((first,next)=>{
+            return first + " " + next;
+        })
+        document.write(`<p>${res5}</p>`);
+    </script>
+    <h2>Splice()</h2>
+    <script>
+        //splice is used to delete and add specific elements in an array
+        let arr6=[10,20,30,40,50,60,70,80,90,100];
+        document.write(`<p>${arr6}</p>`);
+        arr6.splice(4,2);
+        document.write(`<p>${arr6}</p>`);
+        arr6.splice(4,2);
+        document.write(`<p>${arr6}</p>`);
+        arr6.splice(0,1);
+        document.write(`<p>${arr6}</p>`);
+        arr6.splice(4,1);
+        document.write(`<p>${arr6}</p>`);
+        arr6.splice(3,0,50,60,70,80);
+        document.write(`<p>${arr6}</p>`);
+        arr6.splice(0,1,10,20);
+        document.write(`<p>${arr6}</p>`);
+        arr6.splice(8,1,90,100);
+        document.write(`<p>${arr6}</p>`);
+    </script>
+    <h2>Slice()</h2>
+    <script>
+        //slice is used to choose particular items in an array..!
+        let arr7=[10,20,30,40,50,60,70,80,90,100];
+        document.write(`<p>${arr7.slice(4,7)}</p>`);
+        document.write(`<p>${arr7.slice(0,2)}</p>`);
+        document.write(`<p>${arr7.slice(0,1)}</p>`);
+        document.write(`<p>${arr7.slice(9)}</p>`);
+        document.write(`<p>${arr7.slice(8)}</p>`);
+    </script>
+    <h2>Length()</h2>
+    <script>
+        //Length is used to find the number of elements in an array 
+        // (or) 
+        // It is also used to find the number of characters in string
+        let arr8=[10,20,30,40,50]
+        document.write(`${arr8.length}`);
+        let str="ExcelR";
+        document.write(`${str.length}`);
+    </script>
+    <h2>Substr()</h2>
+    <script>
+        //substr() is used to extract the substring
+        let str1="welcome to ExcelR";
+        document.write(`${str1.substr(0,7)}`,"<br>");
+        document.write(`${str1.substr(8,2)}`,"<br>");
+        document.write(`${str1.substr(11)}`);
+    </script>
+    <h2>padstart()</h2>
+    <script>
+        //It is used to add the required characters at the beginning of the string
+        let card="1234-5678-9101-6546";
+        let X=card.substr(card.length-4);//15
+        let mask=X.padStart(19,"X");
+        document.write(mask);
+    </script>
+    <h2>padEnd()</h2>
+    <script>
+        //it is used to add the  required character at the end of a string
+        let card1="1234-5678-9101-6546";
+        let Y=card1.substr(0,card.length-4).padEnd(card1.length,"X");
+        document.write(Y);
+    </script>
+    <h2>Pad assignment</h2>
+    <script>
+        let card3="1234-5678-9101-6546";
+        let result1=card3.substr(0,5).padEnd(card3.length-10,"X");
+        let result2=card3.substr(9,6).padEnd(card3.length-9,"X")
+        document.write(result1+result2);
+    </script>
+    <h2>Reverse()</h2>
+    <script>
+        //Reverse is used to reverse the array elements
+        let e1="Full Stack";
+        //Replace
+        document.write(`${ Array.from(e1).reverse().toString().replace(",","")}`,"<br>");
+        //ReplaceAll
+        document.write(`${ Array.from(e1).reverse().toString().replaceAll(",","")}`,"<br>");
+        //Replace with Regular Expression
+        document.write(`${ Array.from(e1).reverse().toString().replace(/,/g,"")}`,"<br>");
+        //Join
+        document.write(`${Array.from(e1).reverse().join("")}`);
+    </script>
+    <h2>some()</h2>
+    <script>
+        //Some () method will return true if any one of the element satisfies the condition
+        let arr9=[10,20,30,40,50]
+        document.write(arr9.some((element,index)=>{
+            return element>30;
+        }))
+    </script>
+    <h2>every()</h2>
+    <script>
+        let arr10=[10,20,30,40,50]
+        document.write(arr10.every((element,index)=>{
+            return element<=50;
+        }))
+    </script>
+    <h2>trimStart()</h2>
+    <p>trimStart is used to remove the spaces at the beginning of the string</p>
+    <script>
+        let str2="   Hello World ";
+        document.write(str2.trimStart());
+    </script>
+    <h2>trimEnd()</h2>
+    <p>trimEnd is used to remove the spaces at the End of the string</p>
+    <script>
+        let str3="   Hello World     ";
+        document.write(str2.trimEnd());
+    </script>
+    <h2>trim()</h2>
+    <p>trim is used to remove the spaces at the beginning and end of the string</p>
+    <script>
+        let str4="   Hello World ";
+        document.write(str2.trim());
+    </script>
+
+    <h2>Push() & pop()</h2>
+    <p>Push() is used to add the element at the end of the array<br>Pop is used to remove the element at the end of array</p>
+    <script>
+        let arr11=[20,30,40];
+        arr11.push(50);
+        arr11.push(50);
+        arr11.unshift(10);
+        arr11.unshift(0);
+        arr11.pop();
+        arr11.shift();
+        document.write(arr11)
+    </script>
+    <h2>26th March 2024</h2>
+    <script>
+        let arr12=[];
+        document.write(arr12.length,"<br>");
+        let arr13=[];
+        arr[0]=100;
+        document.write(arr13.length,"<br>");
+        let arr14=[];
+        arr14[100]=2000;
+        document.write(arr14.length,"<br>");
+    </script>
+    <h2>IndexOf()</h2>
+    <p>IndexOf wont create new indexes to repeated elements</p>
+    <script>
+        let arr15=[10,20,30,40,50,30,20,10];
+        let new_arr15=arr15.filter((element,index)=>{
+            return arr15.indexOf(element)==index;
+        });
+        document.write(`${new_arr15}`);
+    </script>
+    <h2>Set()</h2>
+    <p>Set Method also removes the duplicate elements</p>
+    <script>
+        let arr0=[10,20,10,20];
+        let new_arr1=[...new Set(arr0)];
+        console.log(new_arr1);
+    </script>
+    <h2>_.js </h2>
+    <script>
+        let arr16=[10,20,10,20];
+        document.write(`${_.uniq(arr16)}`)
+    </script>
+    <h2>findIndex</h2>
+    <p>It is used to find the index of element in an array</p>
+    <script>
+        let arr17=[10,20,30,40,50,60,40]
+        let res17=arr17.findIndex((element,index)=>{
+            return element==30;
+        })
+        document.write(res17);
+    </script>
+    <h2>Delete the element using splice method and findIndex</h2>
+    <script>
+        let arr18=[10,20,30,40,50];
+        arr18.splice(arr18.findIndex((element,index)=>{
+            return element==40;
+        }),1)
+        document.write(`${arr18}`)
+    </script>
+    <h2>find()</h2>
+    <p>It will check whether the element is available <ul>
+        <li>If available it will return the same element</li>
+        <li>If not available it will return undefined</li>
+    </ul></p>
+    <script>
+        let arr19=[20,30,40,50,70];
+        document.write(arr19.find((element,index)=>{
+            return element==30;
+        }))
+    </script>
+    <h2>includes()</h2>
+    <p>It is used to find the element in an array<br>It is a boolean function<br>If element available it will return true otherwise false</p>
+    <script>
+        let arr20=[10,20,30,40,50];
+        document.write(arr20.includes(20));
+        document.write(arr20.includes(200));
+    </script>
+    <h2>fill()</h2>
+    <p>it is used to fill the particular elements at particular index</p>
+    <script>
+        let arr21=[10,10,10,10,10];
+        let res1=arr21.fill(20,1,2);
+        document.write(res1,"<br>");
+        let res2=res1.fill(30,2,3);
+        document.write(res2,"<br>");
+        let res3=res2.fill(40,3,4);
+        document.write(res3,"<br>");
+        let res4=res3.fill(50,4,5);
+        document.write(res4,"<br>");
+    </script>
+    <h2>flat()</h2>
+    <p>It is used to convert multidimensional array to single dimensional array</p>
+    <script>
+        let arr22=[[1],[2],[3]];
+        document.write(arr22.flat(Infinity),"<br>");
+        let arr23=[[[[[[[[[[[[5]]]]]]]]]]],[[[[[[[[[[[[[[[54]]]]]]]]]]]]]]],[[[[[[[[[1]]]]]]]]],[2]]
+        document.write(arr23.flat(Infinity))
+    </script>
+    <h2>flatMap()</h2>
+    <p>combination of map() and flat() called as flatMap</p>
+    <script>
+        let arr24=[1,2,3];
+        let arr25=["one","two","three"]
+        let new_arr25=arr24.flatMap((element,index)=>{
+            return [element,arr25[index]]
+        })
+        document.write(new_arr25);
+        console.log(new_arr25);
+    </script>
+    <h2>copywithin()</h2>
+    <p>It is used to shift the indexes/copy the indexes</p>
+    <script>
+        let arr26=[10,20,30,40,50,60,70,80,90,100];
+        // document.write(arr26.copyWithin(2),"<br>");
+        // document.write(arr26.copyWithin(4),"<br>");
+        // document.write(arr26.copyWithin(7),"<br>");
+        // document.write(arr26.copyWithin(5),"<br>");
+        // document.write(arr26.copyWithin(4,1),"<br>");
+        // document.write(arr26.copyWithin(4,1,3))
+        document.write(arr26.copyWithin(5,2,4))
+    </script>
+    <h2>sort()</h2>
+    <p>It is used to sort the elements either ascending order or descending order</p>
+    <script>
+        let arr27=[10,50,60,20,30,90];
+        let asc=arr27.sort((num1,num2)=>{
+            return num1-num2;
+        })
+        arr27.sort()
+        document.write(arr27,"<br>");
+        let desc=arr27.sort((num1,num2)=>{
+            return num2-num1;
+        })
+        document.write(desc);
+    </script>
+    <h2>class work</h2>
+    <script>
+        let arr28=[10,50,20,30,40];
+        document.write(`Original Array : ${arr28}`,"<br>")
+        let asc_ord=arr28.sort((num1,num2)=>{
+            return num1-num2;
+        })
+        document.write(`Ascending Order : ${asc_ord}`,"<br>")
+        document.write(`Largest element in an array : ${asc_ord[arr28.length-1]}`,"<br>");
+        document.write(`Second Largest element in an array : ${asc_ord[arr28.length-2]}`,"<br>")
+        document.write(`Smallest element in an array : ${asc_ord[0]}`,"<br>");
+        document.write(`Second smallest element in an array: ${asc_ord[1]}`,"<br>")
+    </script>
+    <h2>Last Index of</h2>
+    <script>
+        let arr29=[10,20,40,50,20,30,10,20,30,40,30,20,10];
+        document.write(arr29.lastIndexOf(10))
+    </script>
+
+</body>
+</html>

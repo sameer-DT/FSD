@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HomeWork</title>
+</head>
+<body>
+    <script>
+        let student=()=>{
+            return [
+            {"s_id":"s001","s_name":"sunny","s_class":"I-CSB","s_marks":37},
+            {"s_id":"s002","s_name":"bunny","s_class":"I-CSB","s_marks":28},
+            {"s_id":"s003","s_name":"pinky","s_class":"I-CSB","s_marks":32},
+            {"s_id":"s004","s_name":"sandy","s_class":"I-CSB","s_marks":39},
+            {"s_id":"s005","s_name":"candy","s_class":"I-CSB","s_marks":29}
+            ]
+        }
+        let marks=student();
+        marks.forEach((marks)=>{
+            document.write(`${marks.s_id} : ${marks.s_name} : ${marks.s_class} : ${marks.s_marks} <br>`);
+        })
+    </script>
+</body>
+</html>

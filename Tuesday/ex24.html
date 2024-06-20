@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Example-24</title>
+</head>
+<body>
+    <h1>Product Name : <input type="text" id="pname"></h1>
+    <h1>Product Cost : <input type="number" id="pcost"></h1>
+    <h1>GST(%) : <input type="number" id="gst"></h1>
+    <h1>GST Amount : <input type="number"id="gstamt"></h1>
+    <button onclick="calcgst()">GST Amount</button><br><br>
+    <button onclick="finalAmt()">Final Amount</button><br><br>
+    <h1>Final Cost : <input type="number" id="finalcost"></h1>
+
+    <script>
+        
+        let calcgst=()=>{
+            let pcost = parseInt(document.getElementById("pcost").value);
+            let gst = parseInt(document.getElementById("gst").value);
+            let gstamt = (pcost * gst)/100;
+            document.getElementById("gstamt").value = gstamt;
+        }
+        let finalAmt=()=>{
+            let pcost = parseInt(document.getElementById("pcost").value);
+            let gst = parseInt(document.getElementById("gst").value);
+            let gstamt = (pcost * gst)/100;
+            let fin=pcost+gstamt;
+            document.getElementById("finalcost").value=fin;
+        }
+    </script>
+</body>
+</html>

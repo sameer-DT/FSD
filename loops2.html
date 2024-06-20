@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Let and Const</title>
+</head>
+<body>
+    <script>
+        // let x=100;
+        // let x=900;
+        // document.write(x);
+        // document.write(x);
+        // let x=100;
+
+        //Global and Local varible
+        // let a=10;
+        // {
+        //     let a=10;
+        //     document.write(a,"");
+        // }
+        // document.write(a);
+
+        //const keyword
+        // const x=100;
+        // x=200;
+        //Error because we can't change the value of constant variable 
+        // const arr=[10,20,30,40,50];
+        // arr[0]=8;
+        // arr[5]=12;
+        // arr[6]=7;
+        // arr.forEach((item,index)=>{
+        //     document.write(index,":",item,"<hr>");
+        // })
+
+
+        // const arr=[`React JS`,`Spring Boot`];
+        // arr[0]='React18.x';
+        // arr[1]='Spring Boot3.x';
+        // arr.forEach((subjects)=>{
+        //     document.write(subjects,"<br>");
+        // }
+
+
+        // const obj={
+        //     "key1":"React",
+        //     "key2":"Spring Boot",
+        //     "key3":"MySQL"
+        // };
+        // obj.key1="React18.x";
+        // obj.key4="Full Stack";
+        // for(let key in obj){
+        //     document.write(obj[key],"<br>");
+        // }
+
+
+        // const obj={
+        //     "key1":"Full stack",
+        // };
+        // obj.key1="Java Full Stack";
+        // obj.key2="React";
+        // for(let item in obj){
+        //     document.write(obj[item],"<br>");
+        // }
+        let arr=[
+            {"e_id":"EA01","e_name":"Anciela","e_salary":10000,"e_image":"https://reqres.in/img/faces/1-image.jpg"},
+
+            {"e_id":"EP02","e_name":"Pinky","e_salary":20000,"e_image":"https://reqres.in/img/faces/2-image.jpg"},
+
+            {"e_id":"ES03","e_name":"Sandy","e_salary":30000,"e_image":"https://reqres.in/img/faces/3-image.jpg"},
+
+            {"e_id":"ESN4","e_name":"Sunny","e_salary":40000,"e_image":"https://reqres.in/img/faces/4-image.jpg"}
+        ]
+
+        document.write(`<table border="1" align="center" cellspacing=5px cellpadding=5px>
+            <tr>
+                <th>Employee ID</th>
+                <th>Employee Name</th>
+                <th>Employee Salary</th>
+                <th>Employee image</th>
+            </tr>
+            `)
+        arr.forEach((details,index)=>{
+            document.write(`<tr>
+                <td>${details.e_id}</td>
+                <td>${details.e_name}</td>
+                <td>${details.e_salary}</td>
+                <td>
+                    <img src= ${details.e_image} width="50px">
+                    </td>
+                </tr>`)
+        })
+    </script>
+</body>
+</html>

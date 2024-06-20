@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Example-17</title>
+    <style>
+        .calculations{
+            display: flex;
+            gap:20px;
+        }
+        .calculations > button{
+            padding:5px;
+            background-color: black;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <h2>a : <input type="number" id="n1"></h2>
+    <h2>b : <input type="number" id="n2"></h2>
+    <div class="calculations">
+        <button onclick="add()">ADD</button>
+        <button onclick="sub()">SUB</button>
+        <button onclick="mul()">MUL</button>
+        <button onclick="div()">DIV</button>
+    </div>
+    <h2>Output : <p id="answer"></p></h2>
+    <script>
+        let add=()=>{
+            let x=parseInt(document.getElementById("n1").value);
+            let y=parseInt(document.getElementById("n2").value);
+            let add=x+y;
+            document.getElementById("answer").innerHTML=`${add}`;
+        }
+        let sub=()=>{
+            let x=parseInt(document.getElementById("n1").value);
+            let y=parseInt(document.getElementById("n2").value);
+            let sub=x-y;
+            document.getElementById("answer").innerHTML=`${sub}`;
+        }
+        let mul=()=>{
+            let x=parseInt(document.getElementById("n1").value);
+            let y=parseInt(document.getElementById("n2").value);
+            let mul=x*y;
+            document.getElementById("answer").innerHTML=`${mul}`;
+        }
+        let div=()=>{
+            let x=parseInt(document.getElementById("n1").value);
+            let y=parseInt(document.getElementById("n2").value);
+            let div=x/y;
+            document.getElementById("answer").innerHTML=`${div}`;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Example-5</title>
+</head>
+<body>
+    <script>
+        let obj={
+            data :{
+                data :{
+                    msg :"Welcome to JSON"
+                }
+            }
+        }
+        
+        let {data:key1}=obj;
+        let {data:final}=key1
+        let {msg}=final;
+        document.write(msg)
+    </script>
+    <h2>Question-18</h2>
+    <script>
+        let obj2 = {
+                key: {
+                    frontend: "Angular14",
+                    backend: "Dot Net",
+                    database: "SQL Server"
+                }
+             };
+        let {key}=obj2;
+        let {frontend,backend,database} =key;
+        document.write(key["frontend"]+"<br>"+key["backend"]+"<br>"+key["database"])
+    </script>
+    <h2>Question-19</h2>
+    <script>
+        let obj4 = {
+            one : {
+                two : {
+                    message: "bye"
+                }
+            }
+        };
+        let {one}=obj4;
+        let {two}=one;
+        let {message}=two;
+        document.write(message);
+    </script>
+</body>
+</html>

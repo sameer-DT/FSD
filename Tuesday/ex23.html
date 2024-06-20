@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Example-23</title>
+</head>
+<body>
+    <h1>Loan Amount : <input type="number" id="loan"></h1>
+    <h1>Interest rate : <input type="number" id="int"></h1>
+    <h1>Time Period : <input type="number" id="time"></h1>
+    <h1>Interest Amount : <input type="number" id="intamt"></h1>
+    <h1>Final Amount : <input type="number" id="final"></h1>
+    <button onclick="interest()">Interest Amount</button>
+    <button onclick="finalamount()">Final Amount</button>
+    <script>
+        let interest=()=>{
+            let loan=document.getElementById("loan").value;
+            let int=document.getElementById("int").value;
+            let time=document.getElementById("time").value;
+            let interest=parseInt(loan)*parseInt(int)*parseInt(time)/100;
+            document.getElementById("intamt").value=interest;
+        }
+        let finalamount=()=>{
+            let i=document.getElementById("intamt").value;
+            let l=document.getElementById( "loan").value;
+            let f=parseInt(i)+parseInt(l);
+            document.getElementById("final").value=f;
+        }
+    </script>
+</body>
+</html>

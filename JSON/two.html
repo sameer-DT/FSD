@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON-2</title>
+</head>
+<body>
+    <script>
+        // let obj={
+        //     sub_one:"React",
+        //     sub_two:"NodeJS",
+        //     sub_three:"MONGODB"
+        // }
+        // document.write(obj.sub_one+"<br/>"+obj.sub_two+ "<br/>"+obj.sub_three+"<br>");
+        // document.write(obj["sub_one"]+"<br/>"+obj["sub_two"]+"<br/>"+obj["sub_three"]+"<br/>");
+        
+        // let {sub_one,sub_two,sub_three}=obj;
+        // document.write(sub_one+"<br/>"+sub_two+"<br/>"+sub_three+"<br/>");
+
+        // for(let key in obj){
+        //     document.write(obj[key],"<br>")
+        // }
+    </script>
+    <h2>Question-10</h2>
+    <script>
+        let arr=[10,20,30,40,50]
+        let [x,y,...z]=arr;
+        let [a,...b]=z;
+        let [p,q]=b;
+        document.write(x,y,a,p,q);
+    </script>
+    <h2>Objects</h2>
+    <script>
+        let obj={
+            "key1":"React",
+            "key2":"Node",
+            "key3":"MongoDB",
+            "key4":"Full stack"
+        }
+        let {key1,...obj1}=obj;
+        let {key2,...obj2}=obj1;
+        let {key3,key4}=obj2;
+        document.write(key1,key2,key3,key4);
+    </script>
+</body>
+</html>

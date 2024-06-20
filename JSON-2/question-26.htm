@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON TASK</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+<body>
+    <script>
+        $.ajax({
+            method:"GET",
+            url:"https://www.7timer.info/bin/astro.php?lon=113.2&lat=23.1&ac=0&unit=metric&output=json&tzshift=0",
+            success:(posRes)=>{
+                let obj=JSON.parse(posRes);
+                const {dataseries}=obj;
+                console.log(dataseries)
+                document.write(`
+                <table border="1" align="center" cellspacing="5" cellpadding="25" height=60% width=50%>
+                    <tr>
+                        <th>S.No</th>
+                        <th>timepoint</th>
+                        <th>Cloudcover</th>
+                        <th>seeing</th>
+                        <th>transparency</th>
+                        <th>lifted index</th>
+                        <th>rh2m</th>
+                        <th colspan=2>wind10m</th>
+                        <th>temp2m</th>
+                        <th>prec_type</th>
+                    </tr>
+                `)
+                dataseries.forEach((data,index)=>{
+                    document.write(`
+                    <tr>
+                        <td>${index+1}</td>
+                        <td>${data.timepoint}</td>
+                        <td>${data.cloudcover}</td>
+                        <td>${data.seeing}</td>
+                        <td>${data.transparency}</td>
+                        <td>${data.lifted_index}</td>
+                        <td>${data.rh2m}</td>
+                        <td>${data.wind10m.direction}</td>
+                        <td>${data.wind10m.speed}</td>
+                        <td>${data.temp2m}</td>
+                        <td>${data.prec_type}</td>
+                    </tr>    
+                    `)
+                })
+                document.write(`</table>`)
+
+
+            }
+        })
+    </script>
+</body>
+</html>

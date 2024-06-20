@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table</title>
+</head>
+<body>
+    <script>
+        let employees=[{"e_id":"EM1","e_name":"e_one","e_image":"https://reqres.in/img/faces/1-image.jpg"},
+                       {"e_id":"EM2","e_name":"e_two","e_image":"https://reqres.in/img/faces/2-image.jpg"},
+                       {"e_id":"EM3","e_name":"e_three","e_image":"https://reqres.in/img/faces/3-image.jpg"},
+                       {"e_id":"EM4","e_name":"e_four","e_image":"https://reqres.in/img/faces/4-image.jpg"},
+                       {"e_id":"EM5","e_name":"e_five","e_image":"https://reqres.in/img/faces/5-image.jpg"}]
+        document.write(`
+        <table border="1" align="center" cellspacing="0" cellpadding="25" height=60% width=70% > 
+            <tr>
+                <th>S.No</th>
+                <th>Employee ID</th>
+                <th>Name</th>
+                <th>Image</th>
+            </tr>
+        `)
+        employees.forEach((element,index)=>{
+            document.write(`
+            <tr align="center">
+                <td>${index+1}</td>
+                <td>${element.e_id}</td>
+                <td>${element.e_name}</td>
+                <td>
+                    <img src=${element.e_image} width="50px"> 
+                </td>
+            </tr>`)
+        })
+        document.write(`</table>`)
+    </script>
+</body>
+</html>

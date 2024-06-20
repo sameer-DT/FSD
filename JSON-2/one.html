@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Json-2</title>
+</head>
+<body>
+    <script>
+        let obj={
+            "key1":"JavaScript"
+        }
+        Object.defineProperty(obj,"key2",{value:"Welcome",writable:false});
+        Object.defineProperty(obj,"key3",{value:"ReactJS",writable:true});
+        Object.defineProperty(obj,"key1",{value:"MERN Stack",writable:false});
+        Object.defineProperty(obj,"key3",{value:"MONGODB",writable:false});
+        console.log(obj);
+    </script>
+    <script>
+        //Adding More than one property at a time
+        let obj1={
+            "key1":"Hi"
+        }
+        Object.defineProperties(obj1,{
+            "key2":{value:"welcome",writable:false},
+            "key3":{value:"Full Stack",writable:false},
+            "key4":{value:"ReactJS",writable:true}
+        })
+        console.log(obj1);
+        obj1.key1="Welcome"
+    </script>
+    <script>
+        //FREEZE operation
+        let obj2={
+            "key":'This is Freezed'
+        }
+        Object.freeze(obj2);
+        console.log(obj2)
+        obj2.key="Welcome"
+        console.log(obj2)
+        delete obj2.key;
+        console.log(obj2)
+    </script>
+    <script>
+        //SEAL Operation
+        let obj3={
+            key3:'This is Sealed'
+        }
+        Object.seal(obj3);
+        console.log(obj3);
+        obj3.key3="Welcome to ExcelR"
+        console.log(obj3);
+        obj3.key3="JAVA FULL STACK"
+        console.log(obj3);
+    </script>
+</body>
+</html>

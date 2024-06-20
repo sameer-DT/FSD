@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product details </title>
+</head>
+<body>
+    <script>
+        let arr=[
+            {"p_id":111,"p_name":"laptop1","p_cost":100000,"p_image":"https://jfsexcelr.s3.ap-south-1.amazonaws.com/laptop1.jpeg"},
+
+            {"p_id":222,"p_name":"laptop2","p_cost":200000,"p_image":"https://jfsexcelr.s3.ap-south-1.amazonaws.com/laptop2.jpeg"},
+
+            {"p_id":333,"p_name":"laptop3","p_cost":300000,"p_image":"https://jfsexcelr.s3.ap-south-1.amazonaws.com/laptop3.jpeg"},
+
+            {"p_id":444,"p_name":"laptop4","p_cost":400000,"p_image":"https://jfsexcelr.s3.ap-south-1.amazonaws.com/laptop4.jpeg"},
+
+            {"p_id":555,"p_name":"laptop5","p_cost":500000,"p_image":"https://jfsexcelr.s3.ap-south-1.amazonaws.com/laptop5.jpeg"}
+    ]
+    document.write(`<table border="1" align="center" cellspacing="5px" cellpadding="5px">
+                    <tr>
+                        <th>Product ID</th>
+                        <th>Product Name</th>
+                        <th>Product cost</th>
+                        <th>Product Image</th>
+                    </tr>
+                    `);
+    arr.forEach((product,index)=>{
+        document.write(`
+        <tr>
+            <td>${product.p_id}</td>
+            <td>${product.p_name}</td>
+            <td>${product.p_cost}</td>
+            <td>
+                <img src=${product.p_image} width="100px">
+            </td>
+        </tr>`)
+    })
+    </script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Example-15</title>
+</head>
+<body>
+    <div>
+        <h2>First Name : <input type="text" id="fname"></h2>
+        <h2>Last Name : <input type="text" id="lname"></h2>
+        <h2>Full Name : <input type="text" id="fullname"></h2>
+        <button onclick="details()">GET MY FULL NAME</button>
+    </div>
+    <script>
+        let details=()=>{
+            let first=document.getElementById("fname").value;
+            let last=document.getElementById("lname").value;
+            let full=document.getElementById("fullname").value=first+" "+last;
+        }
+    </script>
+</body>
+</html>

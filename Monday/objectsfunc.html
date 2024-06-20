@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laptops</title>
+    <style>
+        .parent{
+            display: flex;
+            height: 100vh;
+            gap:30px;
+            align-items: center;
+            justify-content: center;
+        }
+        .child{
+            border: 2px solid blue;
+            border-radius: 20px;
+            padding: 25px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        let laptops=()=>{
+            return [{"name":"ACER","image":"https://jfsexcelr.s3.ap-south-1.amazonaws.com/laptop1.jpeg","ram":"16gb","cost":100000},
+        {"name":"DELL","image":"https://jfsexcelr.s3.ap-south-1.amazonaws.com/laptop2.jpeg","ram":"32gb","cost":200000},
+        {"name":"HP","image":"https://jfsexcelr.s3.ap-south-1.amazonaws.com/laptop3.jpeg","ram":"64gb","cost":300000},
+        {"name":"SAMSUNG","image":"https://jfsexcelr.s3.ap-south-1.amazonaws.com/laptop4.jpeg","ram":"128gb","cost":340000},
+        {"name":"MACoS","image":"https://jfsexcelr.s3.ap-south-1.amazonaws.com/laptop5.jpeg","ram":"256gb","cost":450000}]
+        }
+        let laptop=laptops();
+        document.write(`<div class="parent">`);
+        laptop.forEach((lap)=>{
+            document.write(`<div class="child">
+                <h2>${lap.name}</h2>
+                <img src="${lap.image}" width="250px" height="150px">
+                <h2>${lap.ram}</h2>
+                <h2>${lap.cost}</h2>
+                </div>`)
+        })
+        document.write(`</div>`);
+
+    </script>
+</body>
+</html>

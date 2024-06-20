@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Example-45</title>
+</head>
+<body>
+    <script>
+        let prime=(n)=>{
+            let isPrime=0;
+            if(n===1){
+                return `${n} is neither prime nor composite`;
+            }else if (n>1){
+                for(let i=2;i<n;i++){
+                    if (n%i==0){
+                        isPrime+=1;
+                        break;
+                    }
+                }
+            }else{
+                return `${n} is a Not valid`;
+            }
+            if(isPrime===0) {
+                return `${n} is a prime number`;
+            }else{
+                return `${n} is not a prime number`;
+            }
+        }
+        let res=prime(12);
+        document.write(res);
+    </script>
+</body>
+</html>

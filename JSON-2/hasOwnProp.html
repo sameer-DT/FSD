@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON Method-3</title>
+</head>
+<body>
+    <script>
+        let obj={
+            "key1":"HTML",
+            "key2":"CSS",
+            "key3":"JavaScript",
+        }
+        console.log(obj);
+        let flag=obj.hasOwnProperty("key1");
+        console.log(flag);
+        let flag1=obj.hasOwnProperty("key4");
+        console.log(flag1);
+        delete obj.key3;
+        console.log("Revised Object : ",obj);
+
+    </script>
+</body>
+</html>

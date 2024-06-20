@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GF-3</title>
+</head>
+<body>
+    <script>
+        function *func_one(){
+            yield 100;
+            yield 200;
+            yield 300;
+            yield *func_two();
+            yield "Done..!";
+        }
+        function *func_two(){
+            yield 500;
+        }
+        let cursor=func_one();
+        console.log(cursor.next());
+        console.log(cursor.next());
+        console.log(cursor.next());
+        console.log(cursor.next());
+        console.log(cursor.next());
+        console.log(cursor.next());
+
+    </script>
+</body>
+</html>

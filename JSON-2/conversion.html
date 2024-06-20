@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON type Conversion</title>
+</head>
+<body>
+    <script>
+        let str="Welcome to ExcelR";
+        document.write(typeof(str));
+        let obj1=JSON.parse(str);//converts to object
+        console.log(obj1)
+    </script>
+    <script>
+        let obj={
+            key1:"Hi",
+            key2:"Hello",
+            key3:"FSD"
+        }
+        let arr=Object.entries(obj);//converts object to arr
+        console.log(arr);
+        let object=Object.fromEntries(arr);//converts arr to object
+        console.log(object);
+    </script>
+</body>
+</html>

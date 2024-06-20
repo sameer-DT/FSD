@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Call back Functions</title>
+</head>
+<body>
+    <h1>CALL BACK FUNCTIONS</h1>
+    <script>
+        let func1=(msg)=>{
+            msg();
+        }
+        let func2=()=>{
+            document.write("Welcome to Call Back Functions");
+        }
+        func1(func2)
+    </script>
+    <h1>Example-2</h1>
+    <script>
+        let func_one=(n1,n2)=>{
+            n1();
+            n2();
+        }
+        let func_two=()=>{
+            document.write("Number1 : 20","<br>");
+        }
+        let func_three=()=>{
+            document.write("Number2 : 50","<br>");
+        }
+
+        func_one(func_two,func_three)
+    </script>
+    <h1>Example-3</h1>
+    <script>
+        let func3=(msg)=>{
+            return msg();
+        }
+        let res=func3(
+            ()=>{
+                return "Welcome to ExcelR";
+            }
+        )
+        document.write(res);
+    </script>
+    <h1>Example-4</h1>
+    <script>
+        let addition=(num,call)=>{
+            call(num+5,true);
+        }
+        let subtraction=(num,call)=>{
+            call(num-3,true);
+        }
+        let multiplication=(num,call)=>{
+            call(num*2,true)
+        }
+        let division=(num,call)=>{
+            call(num/2-2,true)
+        }
+        addition(5,(add,flag)=>{
+            if(flag){
+                subtraction(add,(sub,flag)=>{
+                    if(flag){
+                        multiplication(sub,(mul,flag)=>{
+                            if(flag){
+                               division(mul,(div,flag)=>{
+                                if(flag){
+                                    document.write(div);
+                                }
+                               })
+                            }
+                        })
+                    }
+                })
+            }
+        })
+    </script>
+    <h1>Promises Example-1</h1>
+    <script>
+        let msg=new Promise((resolve,reject)=>{
+            resolve("Data Fetched from Server Successfully..!");
+        })
+        let showResult=async ()=>{
+            let res= await msg;
+            document.write(res);
+        }
+        showResult();
+    </script>
+    <!-- <h1>Promises Example-2</h1>
+    <script>
+        let promise2=new Promise((resolve,reject)=>{
+            setTimeout(()=>{
+                resolve("Server Connected Successfully..!");
+            },3000);
+        })
+
+        let result = async()=>{
+            let msg = await promise2;
+            document.write(msg);
+        }
+        result();
+    </script>
+    <h1>Promises Example-3</h1>
+    <script>
+        let promise1=new Promise((resolve,reject)=>{
+            setTimeout(() => {
+                resolve("Database Connected Successfully");
+            }, 1000);
+        })
+
+        let promise_2=new Promise((resolve,reject)=>{
+            setTimeout(()=>{
+                resolve("Backend server is running successfully");
+            },2000);
+        })
+
+        let promise3=new Promise((resolve,reject)=>{
+            setTimeout(()=>{
+                resolve("Successfully Backend is connected to Frontend");
+            },5000)
+        })
+
+        let res1=async()=>{
+            let p1=await promise1;
+            document.write(p1,"<br>");
+        }
+        res1();
+
+        let res2=async()=>{
+            let p2=await promise_2;
+            document.write(p2,"<br>");
+        }
+        res2();
+
+        let res3=async()=>{
+            let p3=await promise3;
+            document.write(p3,"<br>");
+        }
+        res3();
+    </script>
+    <h1>Promise redundancy Example</h1>
+    <script>
+         let p1=new Promise((resolve,reject)=>{
+            setTimeout(() => {
+                resolve("Database Connected Successfully");
+            }, 1000);
+        })
+
+        let p2=new Promise((resolve,reject)=>{
+            setTimeout(()=>{
+                reject("Failed");
+            },2000);
+        })
+
+        let p3=new Promise((resolve,reject)=>{
+            setTimeout(()=>{
+                resolve("Successfully Backend is connected to Frontend");
+            },5000)
+        })
+
+        // Promise.all([p1,p2,p3]).then((result)=>{
+        //     document.write(result);
+        // })
+        // Promise.race([p1,p2,p3]).then((result)=>{
+        //     document.write(result);
+        // })
+        Promise.allSettled([p1,p2,p3]).then((result)=>{
+            console.log(result)
+        }) -->
+    <!-- </script> -->
+    <h1>Promises with Call back hell</h1>
+    <script>
+        let add=(num)=>{
+            return new Promise((resolve,reject)=>{
+                resolve(num+5);
+            })
+        }
+        let sub=(num)=>{
+            return new Promise((resolve,reject)=>{
+                resolve(num-3);
+            })
+        }
+        let consume=async()=>{
+            let addRes=await add(5);
+            let subRes=await sub(addRes);
+            document.write(addRes,"<br>",subRes);
+        }
+        consume();
+    </script>
+
+</body>
+</html>

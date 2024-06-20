@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Constructor Functions</title>
+</head>
+<body>
+    <script>
+        function class_one(){
+            this.var_one="Welcome to ";
+            this.var_two="ExcelR";
+        }
+        let obj=new class_one();
+        document.write(obj.var_one," ",obj.var_two,"<br> <br>");
+    </script>
+    <h2>Constructor Function with four Variables</h2>
+    <script>
+        function class_two(){
+            this.str="Constructor Functions";
+            this.num=100;
+            this.bool=true;
+            this.arr=[1,2,3];
+        }
+        let obj1=new class_two();
+        document.write(obj1.str,"<br>",obj1.num,"<br>",obj1.bool,"<br>",obj1.arr,"<br>");
+      </script>
+      <h2>Constructor Function with Functions</h2>
+      <script>
+        function class_three(){
+            this.func_one=function(){
+                document.write("CF with Func-1","<br>");
+            }
+            this.func_two=function(){
+                document.write("CF with Func-2","<br>");
+            }
+            this.func_three=function(){
+                document.write("CF with Func-3","<br>");
+            }
+        }
+        let ob=new class_three();
+        ob.func_one();
+        ob.func_two();
+        ob.func_three();
+      </script>
+      <h2>Returning the object </h2>
+      <script>
+        function class_four(){
+            this.func_one=function(){
+                return "Welcome to React";
+            }
+            this.func_two=function(){
+                return 200;
+            }
+        }
+        let object=new class_four();
+        let result=object.func_one()+"<br>"+object.func_two();
+        document.write(result);
+      </script>
+      <h2>Constructor functions with multiple variables with multiple functions</h2>
+      <script>
+        function class_five(){
+            this.var_one="Var1 in Func1";
+            this.var_two="Var2 in Func2";
+            this.var_three="Var3 in Func3";
+            this.var_four="Var4 in Func4";
+            this.func_one=function(){
+                document.write(this.var_one,"<br>");
+            }
+            this.func_two=function(){
+                document.write(this.var_two,"<br>");
+            }
+            this.func_three=function(){
+                document.write(this.var_three,"<br>");
+            }
+            this.func_four=function(){
+                document.write(this.var_four,"<br>");
+            }
+        }
+        let object5=new class_five();
+        object5.func_one();
+        object5.func_two();
+        object5.func_three();
+        object5.func_four();
+      </script>
+      <h2>Constructor Functions with multiple variables with multiple functions Returning the values</h2>
+      <script>
+        function class_six(){
+            this.msg1="Varible 1 ";
+            this.msg2="Varible 2";
+            this.msg3="Varible 3";
+            this.func_one=function(){
+                return this.msg1;
+            }
+            this.func_two=function(){
+                return this.msg2
+            }
+            this.func_three=function(){
+                return this.msg3
+            }
+        }
+        let object6=new class_six();
+        let res=object6.func_one()+"<br>"+object6.func_two()+"<br>"+object6.func_three();
+        document.write(res);
+      </script>
+      <h2>Constructor function referring by prototype</h2>
+      <script>
+        function class_seven(){}
+        class_seven.prototype.name="Sunny";
+        class_seven.prototype.class="7th";
+        class_seven.prototype.marks=63;
+        let object8=new class_seven();
+        document.write("Name : "+object8.name+"<br>"+"Standard : "+object8.class+"<br>"+"Marks : "+object8.marks);
+      </script>
+      <h2>Using prototype adding the functions</h2>
+      <script>
+        function class_eight(){}
+        class_eight.prototype.func_one=function(){
+            return "Function1";
+        }
+        class_eight.prototype.func_two=function(){
+            return "Function2";
+        }
+        class_eight.prototype.func_three=function(){
+            return "Function3";
+        }
+        let object9=new class_eight();
+        let result9=object9.func_one()+"<br>"+object9.func_two()+"<br>"+object9.func_three();
+        document.write(result9);
+      </script>
+      <h2>Adding variable and adding function and returning each var in each function using PROTOTYPE</h2>
+      <script>
+        function class_ten(){}
+        class_ten.prototype.var1="Iam var1";
+        class_ten.prototype.var2="Iam var2";
+        class_ten.prototype.var3="Iam var3";
+        class_ten.prototype.func1=function(){
+            return this.var1;
+        }
+        class_ten.prototype.func2=function(){
+            return this.var2;
+        }
+        class_ten.prototype.func3=function(){
+            return this.var3;
+        }
+        let object10=new class_ten();
+        let res10=object10.func1()+"<br>"+object10.func2()+"<br>"+object10.func3();
+        document.write(res10)
+      </script>
+      <h2>JavaScript Inheritance</h2>
+      <script>
+        function class_1(){}
+        class_1.prototype.var1="React";
+        class_1.prototype.var2="Node";
+
+        function class_2(){}
+        class_2.prototype=Object.create(class_1.prototype);
+        class_2.prototype.var3="JavaScript";
+        class_2.prototype.var4="BootStrap";
+        
+        let obj2=new class_2();
+        document.write(obj2.var1+"<br>"+obj2.var2+"<br>"+obj2.var3+"<br>"+obj2.var4);
+
+      </script>
+      <h2>Three Constructor Functions using PROTOTYPE</h2>
+      <script>
+        function class1(){}
+        class1.prototype.var1="Class 1 Variable1";
+        function class2(){}
+        class2.prototype=Object.create(class1.prototype);
+        class2.prototype.var2="Class 2 variable1";
+        function class3(){}
+        class3.prototype=Object.create(class2.prototype);
+        class3.prototype.var3="Class 3 Variable1";
+
+        let obj3=new class3();
+        document.write(obj3.var1+"<br>"+obj3.var2+"<br>"+obj3.var3);
+      </script>
+      <h2>Constructor Functions with multiple prototype funcs and vars</h2>
+      <script>
+        function class1(){}
+        class1.prototype.func1=function(){}
+        class1.prototype.var1="Class 1 variable1";
+        function class2(){}
+        class2.prototype.func2=function(){}
+        class2.prototype=Object.create(class1.prototype);
+        class2.prototype.var2="Class 2 variable1";
+        class2.prototype.var5="Class 2 variable2"
+        function class3(){}
+        class3.prototype.func3=function(){}
+        class3.prototype=Object.create(class2.prototype);
+        class3.prototype.var3="Class 3 variable1";
+        function class4(){}
+        class4.prototype.func4=function(){}
+        class4.prototype=Object.create(class3.prototype);
+        class4.prototype.var4="Class 4 variable1";
+
+        let finalObject=new class4();
+        document.write(finalObject.var1+"<br>"+finalObject.var2+"<br>"+finalObject.var3+"<br>"+finalObject.var4+"<br>"+finalObject.var5+"<br>");
+      </script>
+
+
+</body>
+</html>

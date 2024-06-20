@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Classwork</title>
+</head>
+<body>
+    <script>
+        let employees=[{"e_id":111,"e_name":"pinky","e_ctc":1000000,"e_tds":300000,"e_netSalary":7000000},
+                       {"e_id":222,"e_name":"sandy","e_ctc":2000000,"e_tds":500000,"e_netSalary":9000000},
+                       {"e_id":333,"e_name":"sunny","e_ctc":3000000,"e_tds":700000,"e_netSalary":4000000}
+                    ];
+        document.write(`<table border=1 cellpadding=5px cellspacing=5px>
+            <tr>
+                <th>Employee ID</th>
+                <th>Employee Name</th>
+                <th>Employee CTC</th>
+                <th>Employee tds</th>
+                <th>Employee Net Salary</th>
+            </tr>`);
+        employees.forEach((employees,index)=>{
+            document.write(`
+            <tr>
+                <td>${employees.e_id}</td>
+                <td>${employees.e_name}</td>
+                <td>${employees.e_ctc}</td>
+                <td>${employees.e_tds}</td>
+                <td>${employees.e_netSalary}</td>
+                </tr>`);
+        })
+    </script>
+</body>
+</html>

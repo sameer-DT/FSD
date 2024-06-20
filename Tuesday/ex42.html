@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Example-42</title>
+</head>
+<body>
+    <script>
+        let login=(username,password)=>{
+            return true ? username=="admin"&&password=="admin" : false;
+        }
+        let res=login("admin","123@");
+        let res2=login("admin","admin");
+        document.write(res,"<br>");
+        document.write(res2);
+    </script>
+</body>
+</html>

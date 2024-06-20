@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promises</title>
+</head>
+<body>
+    <h1><center>Promise Example</center></h1>
+    <script>
+        let promise1=new Promise((resolve,reject)=>{
+            setTimeout(()=>{
+                resolve("Promise-1")
+            },3000);
+        })
+
+        let promise2=new Promise((resolve,reject)=>{
+            setTimeout(()=>{
+                reject("Error in Promise 2");
+            },5000);
+        })
+
+        let promise3=new Promise((resolve,reject)=>{
+            setTimeout(()=>{
+                resolve("Promise-3 is successful")
+            },10000);
+        })
+
+        Promise.race([promise1,promise2,promise3]).then((result)=>{
+            console.log(result);
+        })
+
+        Promise.all([promise1,promise2,promise3]).then((result)=>{
+            console.log(result);
+        })
+
+        Promise.allSettled([promise1,promise2,promise3]).then((result)=>{
+            console.log(result);
+        })
+    </script>
+</body>
+</html>

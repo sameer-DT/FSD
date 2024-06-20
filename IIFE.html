@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IIFE</title>
+</head>
+<body>
+    <h2>IIFE</h2>
+    <script>
+        (()=>{
+            document.write("IMMEDIATELY INVOKABLE  FUNCTION EXPRESSION");
+        })()
+    </script>
+    <h2>IIFE With Return</h2>
+    <script>
+        let res=(()=>{
+            return "Welcome to ExcelR";
+        })()
+        document.write(res);
+    </script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON Functions</title>
+</head>
+<body>
+    <script>
+        let obj1={
+            "key1" : function(){
+                return "Welcome to JSON Function Expression..!"
+            },
+            "key2": function(){
+                return "Welcome to ExcelR"
+            }
+        }
+        let res1=obj1.key1();
+        console.log(res1);
+        let res2=obj1.key2();
+        console.log(res2);
+    </script>
+    <script>
+        let obj2={
+            "key1":()=>{
+                return "Arrow function"
+            },
+            "key2":()=>{
+                return "Mysql Connection soon..!"
+            }
+        }
+        let res3=obj2.key1();
+        console.log(res3);
+        let res4=obj2.key2();
+        console.log(res4);
+    </script>
+    <script>
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Functions</title>
+    <style>
+        .parent{
+            display: flex;
+            height: 100vh;
+            justify-content: center;
+            align-items: center;
+            gap:20px;
+        }
+        .child{
+            border-radius:20px;
+            border: 1px solid purple;
+            padding: 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <!-- <script>
+        function func_one(){
+            document.write("Welcome to Function Declaration..!");
+        }
+        func_one();
+    </script> -->
+
+    <!-- <script>
+        let func_one=function(){
+            document.write("Welcome to function expression/Anonymous functions");
+        }
+        func_one();
+    </script> -->
+
+    <!-- <script>
+        let func=()=>{
+            document.write("Hi Iam an Arrow Function");
+        }
+        func(); 
+    </script> -->
+
+    <!-- <script>
+        function addition(){
+            let a=100;
+            let b=200;
+            let c=a+b;
+            document.write("Addition Using Function declaration","<br>");
+            document.write(`Addition of ${a} and ${b} is ${c}`,"<hr>");
+        }
+        addition();
+        let add=function(){
+            let a=100;
+            let b=100;
+            let c=a+b;
+            document.write("Addition Using Function expression","<br>");
+            document.write(`Addition of ${a} and ${b} is ${c}`);
+        }
+        add();
+    </script> -->
+
+    <!-- <script>
+        let maths=function(){
+            let x=100;
+            document.write(`Square of ${x} is ${x*x}`,"<br>");
+            document.write(`Cube of ${x} is ${x*x*x}`);
+        }
+
+        function maths(){
+            let x=100;
+            document.write(`Square of ${x} is ${x*x}`,"<br>");
+            document.write(`Cube of ${x} is ${x*x*x}`);
+        }
+        maths();
+
+        let maths=()=>{
+            let x=100;
+            document.write(`Square of ${x} is ${x*x}`,"<br>","<br>");
+            document.write(`Cube of ${x} is ${x*x*x}`);
+        }
+        maths();
+    </script> -->
+
+    <!-- <script>
+        // function swapping(){
+        //     let x=400;
+        //     let y=200;
+        //     document.write("Swapping :","<br>");
+        //     document.write(`X = ${x}`,"<br>",`Y = ${y}`);
+        //     x=x+y;
+        //     y=x-y;
+        //     x=x-y;
+        //     document.write("<hr>After Swapping: ","<br>");
+        //     document.write(`X = ${x}`,"<br>",`Y = ${y}`);
+        // }
+        // swapping();
+
+        let swapping=function(){
+            let x=400,y=200;
+            document.write("Before Swapping :","<br>");
+            document.write(`X = ${x}`,"<br>",`Y = ${y}`);
+            x=x+y;
+            y=x-y;
+            x=x-y;
+            document.write("After Swapping :","<br>");
+            document.write(`X = ${x}`,"<br>",`Y = ${y}`);
+            
+        }
+        swapping();
+    </script> -->
+
+
+    <!-- <script>
+        // let func=()=>{
+        //     return "Welcome to ExcelR";
+        // }
+        // let greet=func();
+        // document.write(greet);
+
+        // function greet(){
+        //     return "welcome to ExcelR";
+        // }
+        // let res=greet();
+        // document.write(res);
+
+        let greet=function(){
+            return "Welcome to ExcelR , Happy Learning";
+        }
+        document.write(greet());
+    </script> -->
+
+    <!-- <script>
+        // function test_func(){
+        //     return "Welcome to Javascript";
+        // }
+        // let result=test_func();
+        // document.write(result);
+
+        // let test_func=function(){
+        //     return "Welcome to Javascript";
+        // }
+        // let result=test_func();
+        // document.write(result);
+
+        // let test_func=()=>{
+        //     return "Welcome to Javascript";
+        // }
+        // let result=test_func();
+        // document.write(result);
+    </script> -->
+
+
+    <script>
+        // let check_odd_even=function(){
+        //     return 100;
+        // }
+        // let result=check_odd_even();
+        // if(result%2==0){
+        //     document.write(`${result} is EVEN Number`);
+        // }else{
+        //     document.write(`${result} is ODD Number`);
+        // }
+
+        // let odd_even=()=>{
+        //     return 67;
+        // }
+        // let res=odd_even();
+        // if(res%2==0){
+        //     document.write(`${res} is EVEN`);
+        // }else{
+        //     document.write(`${res} is ODD`);
+        // }
+
+
+        // let func=()=>{
+        //     return true;
+        // }
+        // let res=func();
+        // res ? document.write("Frontend") : document.write("Backend");
+
+        // let arr=()=>{
+        //     return [10,20,30,40,50];
+        // }
+        // let res=arr();
+        // res.forEach((element,ind)=>{
+        //     document.write(element,":",ind,"<br>");
+        // })
+
+        // let list=()=>{
+        //     return {
+        //         "name":"sunny",
+        //         "marks":24
+        //     }
+        // }
+        // let res=list();
+        // for(let val in res){
+        //     document.write(res[val],"<br>");
+        // }
+
+        let employees=()=>{
+            return [{"ename":"Sunny","edept":"CSE","eimage":"https://reqres.in/img/faces/1-image.jpg"},
+                    {"ename":"Bunny","edept":"AI","eimage":"https://reqres.in/img/faces/2-image.jpg"},
+                    {"ename":"Pinky","edept":"CSB","eimage":"https://reqres.in/img/faces/3-image.jpg"},
+                    {"ename":"Sandy","edept":"CSIT","eimage":"https://reqres.in/img/faces/4-image.jpg"},
+                    {"ename":"Candy","edept":"MECH","eimage":"https://reqres.in/img/faces/5-image.jpg"}]
+        }
+        let emp_details=employees();
+        document.write(`<div class="parent">`);
+        emp_details.forEach((value)=>{
+            document.write(`<div class="child">
+                <img src=${value.eimage} width="250px">
+                <h2>${value.ename}</h2>
+                <h3>${value.edept}</h3>
+                </div>`)
+        });
+        document.write(`</div>`);
+    </script>
+</body>
+</html>

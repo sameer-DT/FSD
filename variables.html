@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Variables</title>
+</head>
+<body>
+    <script>
+        var msg='ExcelR';
+        var wish=`Welcome to ${msg}`;
+        document.write(wish,"<br>");
+
+        var sub1=`java`;
+        var sub2=`react`;
+        var sub3=`MySQL`;
+        var fullstack=`In full stack we will cover ${sub1},${sub2} and ${sub3}`;
+        document.write(fullstack,"<br>");
+        document.write("decimals","<br>");
+        var dec=100;
+        document.write(`The value of decimal is ${dec}.`,"<br>");
+        var hex=0x123abc;
+        document.write(`The value of hexadecimal is ${hex}`,"<br>");
+        var binary=0b1010;
+        document.write(`The value of binary is ${binary}`,"<br>");
+        var double=100.123;
+        document.write(`The value of double is ${double}`,"<br>");
+        
+
+        var num1=200;
+        var num2=100;
+        document.write(num1+num2,'<br>');
+
+        document.write("Boolean Datatypes","<br>");
+        var flag=true;
+        document.write(flag,`<br>`);
+        var flag1=false;
+        document.write(flag1,`<br>`);
+        document.write("Undefined Data type",`<br>`);
+        var x;
+        document.write(x,`<br>`);
+        document.write(x+10,`<br>`);
+        document.write("Null Data type",`<br>`);
+        var y=null;
+        document.write(y,`<br>`);
+        document.write(y+10,`<br>`);
+        document.write("BigInt Data Type",`<br>`);
+        var large=1538624629628956398563475624856385687639829864857634783474689462856278n;
+        document.write(large,`<br>`);
+
+        document.write("Symbol Data Type",`<br>`);
+        var a=Symbol(100);
+        document.write(a.description);
+    </script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Example-16</title>
+</head>
+<body>
+    <h2>First Name : <input type="text" id="fname"></h2>
+    <h2>Last Name : <input type="text" id="lname"></h2>
+    <button onclick="greet()">Full Name</button><br><br>
+    <h1 id="result"></h1>
+
+    <script>
+        let greet=()=>{
+            let fname=document.getElementById("fname").value;
+            let lname=document.getElementById("lname").value;
+            let full=fname+" "+lname
+            document.getElementById("result").innerHTML=`Welcome to ${full}`;
+        }
+    </script>
+</body>
+</html>

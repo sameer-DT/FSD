@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MAP in Object</title>
+</head>
+<body>
+    <script>
+        let arr=[{"key1":"Laptop"},
+                 {"key2":"Mobile"},
+                 {"key3":"Air Conditioner"},
+                 {"key4":"EarBuds"},
+                 {"key5":"Refrigerator"}]
+        let new_arr=arr.map((element,index)=>{
+            if(index==0){
+                return{...element,"cost":30000}
+            }else if(index==1){
+                return{...element,"cost":10000}
+            }else if(index==2){
+                return{...element,"cost":50000}
+            }else if(index==3){
+                return{...element,"cost":10000}
+            }else{
+                return{...element,"cost":96000}
+            }
+        })
+        console.table(new_arr)
+    </script>
+</body>
+</html>

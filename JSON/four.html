@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON-4</title>
+</head>
+<body>
+   <script>
+    let obj={
+        "key1":"Welcome",
+        "key2":"ExcelR"
+    }
+    let sol1=Object.keys(obj);
+    sol1.length>0 ? document.write("Valid Object") : document.write("Invalid Object")
+
+    let sol2=Object.values(obj);
+    sol2.length>0 ? document.write("Valid") : document.write("Invalid");
+   </script> 
+   <h2>Question-16</h2>
+   <script>
+    let example2={
+        "sub_one":"React",
+        "sub_two":"Node",
+        "sub_three":"MongoDB"
+    }
+    let sol=Object.keys(example2);
+    sol.length > 0 ? document.write("Not Empty") : document.write("Invalid");
+
+    let e2=Object.values(example2);
+    e2.length > 0 ? document.write("Not Empty") : document.write("Invalid");
+   </script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON-1</title>
+</head>
+<body>
+    <script>
+        let obj={
+            "key1":"Apple",
+            "key2":"Mango"
+        }
+        //Read data by using (dot) . operator
+        document.write(obj.key1,"<br>",obj.key2);
+
+        //Read data by using (square) [] operator
+        document.write(obj["key1"],obj["key2"],"<br>");
+
+        // Destructuring 
+        let {key1,key2}=obj;
+        document.write(key1,key2,"<br>");
+
+        //for..in loop
+        for(let key in obj){
+            document.write(obj[key],"<br>");
+        }
+    </script>
+</body>
+</html>

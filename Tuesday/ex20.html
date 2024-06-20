@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product</title>
+</head>
+<body>
+    <h2>Enter p value : <input type="number" id="p"></h2>
+    <h2>Enter q value : <input type="number" id="q"></h2>
+    <h2>Product : <h3 id="ans"></h3></h2>
+    <button onclick="product()"> Product</button>
+    <script>
+        let product=()=>{
+            let p=document.getElementById("p").value;
+            let q=document.getElementById("q").value;
+            document.getElementById('ans').innerHTML = (parseInt(p)*parseInt(q));
+        }
+    </script>
+</body>
+</html>
